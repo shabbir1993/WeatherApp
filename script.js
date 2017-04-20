@@ -7,7 +7,12 @@ var lat = 0; //stores latitude value
 var  main, place , wind, wind_speed, weather_info, icon, title, description, temp, country;
 var url = "http://openweathermap.org/img/w/";
 
-getLocationAndCallAPI();
+
+getLocation();
+
+
+
+/******************Function Definitions*******************/
 
 function getDatafromJSON(jsonObj) {
     weather_info = jsonObj['weather'];
@@ -37,19 +42,24 @@ function render(){
     $("#weatherIcon").attr('src',url);
 }
 
-function getLocationAndCallAPI(){
+
+function getLocation(){
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             long = position.coords.longitude;
             lat = position.coords.latitude;
-            $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+ lat +"&lon="
-                + long + "&appid=45923afd28277f058ece91425ebdbc7b"
-                , function (response) {
-                    getDatafromJSON(response);
-                    render();
-                });
+            CallApi(long,lat);
         });
     }
+}
+
+function CallApi(long, lat){
+    $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+ lat +"&lon="
+        + long + "&appid=45923afd28277f058ece91425ebdbc7b"
+        , function (response) {
+            getDatafromJSON(response);
+            render();
+    });
 }
 
 
