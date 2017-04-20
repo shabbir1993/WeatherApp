@@ -56,9 +56,16 @@ function getLocation(){
 function CallApi(long, lat){
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+ lat +"&lon="
         + long + "&appid=45923afd28277f058ece91425ebdbc7b"
-        , function (response) {
-            getDatafromJSON(response);
-            render();
+        , function (response, status) {
+            if(status == "success") {
+                getDatafromJSON(response);
+                render();
+            }
+
+            else if(status == "timeout"){
+                alert("Something Wrong with the Connection")
+                $("#weather").html("Low or No Connectivity...")
+            }
     });
 }
 
