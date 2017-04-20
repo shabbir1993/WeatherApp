@@ -33,14 +33,14 @@ function getDatafromJSON(jsonObj) {
 }
 
 function render(){
-    $("#data").html("<div>" + place + " , "+ country+ "<br>" +
-        " " + temp + "" +
-        " &#8451 <br>" +
-        "Wind Speed : " +wind_speed+ "MPH <br> "
-        +""+ description +
-        " <img src= "+url+"></div>" );
-    $("#weatherIcon").attr('src',url);
+
+    $("#place").html(place + " , " + country);
+    $("#temperature").html(temp + "&#8451");
+    $("#description").html(description);
+    $("#weatherIcon").html("<img src= "+url+">");
 }
+
+
 
 
 function getLocation(){

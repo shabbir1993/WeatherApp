@@ -1,16 +1,27 @@
-h1, h3 {
-    color : #000a80;
+body {
     text-align: center;
-    font-family: sans-serif;
+    color: aliceblue;
+
 }
 
-#data {
-	text-align: center;
-	font-family: sans-serif;
-	font-size: 16px;
-	padding-top: 5px;
+#headerText {
+    margin: auto;
+    width: 70%;
+    font-family: "Segoe UI Light";
+    font-size: 36px;
 }
 
 body{
-    background-color: #70efeb;: ;
+    background-color: #020206;
+}
+
+#place, #temperature, #description, #copyrights {
+    color: white;
+    font-size: 26px;
+    font-family: "Segoe UI Light";
+}
+
+
+#weather {
+    text-align: center;
 }
