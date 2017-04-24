@@ -9,18 +9,18 @@ body {
 #headerText {
     margin: auto;
     width: 70%;
-    font-family: Tahoma, Verdana;
+    font-family: "Rosarina", Tahoma, Verdana;
     font-size: 36px;
 }
 
 body{
-    background-color: rgba(0, 0, 0, 0.84);
+    background-color: rgba(8, 8, 8, 0.85);
 }
 
 #place, #temperature, #description, #copyrights {
     color: white;
     font-size: 26px;
-    font-family:  Tahoma, Verdana;
+    font-family: "Rosarina",  Tahoma, Verdana;
 }
 
 
