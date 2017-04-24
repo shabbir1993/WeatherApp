@@ -4,21 +4,23 @@ body {
 
 }
 
+
+
 #headerText {
     margin: auto;
     width: 70%;
-    font-family: "Segoe UI Light";
+    font-family: Tahoma, Verdana;
     font-size: 36px;
 }
 
 body{
-    background-color: #020206;
+    background-color: rgba(0, 0, 0, 0.84);
 }
 
 #place, #temperature, #description, #copyrights {
     color: white;
     font-size: 26px;
-    font-family: "Segoe UI Light";
+    font-family:  Tahoma, Verdana;
 }
 
 
