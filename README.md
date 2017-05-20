@@ -1,2 +1,4 @@
-# WeatherApp
-Simple Weather App built for Free Code Camp
+# Weather App Built for FreeCodeCamp
+Shows Local Weather, 
+extracts weather info from Open Weather Map API.
+
